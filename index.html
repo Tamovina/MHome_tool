@@ -111,24 +111,24 @@
       </p>
       <p>
         Để thử lại và cài đặt
-        <a href="https://github.com/Tamovina/esp_update">với thiết bị MHome</a>, hãy kết nối với máy tính và bấm nút:
+        <a href="https://github.com/Tamovina/esp_update">với thiết bị MHome</a>, hãy kết nối với máy tính và bấm nút BẮT ĐẦU CÀI ĐẶT:
       </p>
 
        <esp-web-install-button
-  manifest="static/firmware_build/manifest.json"
-  show-log
-  erase-first
->
-  <button slot="activate">CÀI ĐẶT</button>
-  <span slot="unsupported">Rất tiếc, trình duyệt của bạn không hoạt động!</span>
-  <span slot="not-allowed">Rất tiếc, bạn không được phép sử dụng cái này trên HTTP!</span>
-</esp-web-install-button>
-  <script>
-const espWebInstallButton = document.querySelector("esp-web-install-button");
-espWebInstallButton.addEventListener(
-  "state-changed", (ev) => { console.log(ev.detail) }
-);
-</script>    
+        manifest="static/firmware_build/manifest.json"
+        show-log
+        erase-first
+       >
+          <button slot="activate">BẮT ĐẦU CÀI ĐẶT</button>
+          <span slot="unsupported">Rất tiếc, trình duyệt của bạn không hoạt động!</span>
+          <span slot="not-allowed">Rất tiếc, bạn không được phép sử dụng cái này trên HTTP!</span>
+       </esp-web-install-button>
+      <script>
+       const espWebInstallButton = document.querySelector("esp-web-install-button");
+         espWebInstallButton.addEventListener(
+        "state-changed", (ev) => { console.log(ev.detail) }
+        );
+     </script>    
      
       <p>
         <i>  
