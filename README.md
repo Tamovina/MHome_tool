@@ -1,7 +1,7 @@
-# ESP Web Tools
+# CÔNG CỤ CÀI ĐẶT CHO THIẾT BỊ ESP
 
-Allow flashing ESPHome or other ESP-based firmwares via the browser. Will automatically detect the board type and select a supported firmware.
 
+Cho phép Flash thiết bị ESPHome hoặc bo mạch ESP cơ bản khác từ trình duyệt. Nó sẽ tự động phát hiện bo ạch và phiên bản phần mềm hỗ trợ tương thích.
 ```html
 <esp-web-install-button
   manifest="firmware_esphome/manifest.json"
