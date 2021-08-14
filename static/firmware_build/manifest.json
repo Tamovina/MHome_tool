@@ -1,5 +1,5 @@
 {
-  "name": "ESP Web Tools demo powered by ESPHome",
+  "name": "Cài đặt chương trình mẫu cho ESP",
   "builds": [
     {
       "chipFamily": "ESP32",
