@@ -123,7 +123,12 @@
   <span slot="unsupported">Rất tiếc, trình duyệt của bạn không hoạt động!</span>
   <span slot="not-allowed">Rất tiếc, bạn không được phép sử dụng cái này trên HTTP!</span>
 </esp-web-install-button>
-      
+  <script>
+const espWebInstallButton = document.querySelector("esp-web-install-button");
+espWebInstallButton.addEventListener(
+  "state-changed", (ev) => { console.log(ev.detail) }
+);
+</script>    
      
       <p>
         <i>  
