@@ -114,12 +114,17 @@
         <a href="https://github.com/Tamovina/esp_update">với thiết bị MHome</a>, hãy kết nối với máy tính và bấm nút:
       </p>
 
-       
-      <esp-web-install-button
-        log-console
-        erase-first                       
-        manifest="static/firmware_build/manifest.json"  
-      ></esp-web-install-button>
+       <esp-web-install-button
+  manifest="static/firmware_build/manifest.json"
+  show-log
+  erase-first
+>
+  <button slot="activate">Custom install button</button>
+  <span slot="unsupported">Ah snap, your browser doesn't work!</span>
+  <span slot="not-allowed">Ah snap, you are not allowed to use this on HTTP!</span>
+</esp-web-install-button>
+      
+     
       <p>
         <i>  
           Chú ý, phần mềm này chỉ hỗ trợ trình duyệt Chrome và Edge trên máy tính. Nếu không thấy tìm thấy thiết bị ESP, hãy kiểm tra lại cài đặt <a href="#drivers">drivers</a>.
