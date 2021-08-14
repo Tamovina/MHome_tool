@@ -1,10 +1,10 @@
 {
-  "name": "esp-web-tools",
+  "name": "MHome-flash-tools",
   "version": "3.4.2",
-  "description": "Web tools for ESP devices",
+  "description": "Công cụ Flash cho thiết bị MHome",
   "main": "dist/install-button.js",
   "repository": "https://github.com/esphome/web",
-  "author": "ESPHome maintainers",
+  "author": "Thiết bị MHome ",
   "license": "Apache-2.0",
   "scripts": {
     "prepublishOnly": "script/build"
