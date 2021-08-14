@@ -64,13 +64,13 @@ export type FlashState =
   | ErrorState;
 
 export const enum State {
-  INITIALIZING = "initializing",
-  MANIFEST = "manifest",
-  PREPARING = "preparing",
-  ERASING = "erasing",
-  WRITING = "writing",
-  FINISHED = "finished",
-  ERROR = "error",
+  INITIALIZING = "Đang cài đặt",
+  MANIFEST = "Liệt kê",
+  PREPARING = "Đang chuẩn bị",
+  ERASING = "Đang xóa",
+  WRITING = "Đang nạp",
+  FINISHED = "Đã kết thúc",
+  ERROR = "Lỗi!",
 }
 
 export const enum FlashError {
