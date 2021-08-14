@@ -40,7 +40,7 @@ export const flash = async (
 
   fireStateEvent({
     state: State.INITIALIZING,
-    message: "Initializing...",
+    message: "Đang cài đặt...",
     details: { done: false },
   });
 
@@ -52,7 +52,7 @@ export const flash = async (
       fireStateEvent({
         state: State.ERROR,
         message:
-          "Failed to initialize. Try resetting your device or holding the BOOT button while selecting your serial port.",
+          "Không thể khởi tạo. Thử reset thiết bị và giữ nút FLASH hoặc nút BOOT khi chọn cổng COM.",
         details: { error: FlashError.FAILED_INITIALIZING, details: err },
       });
       await esploader.disconnect();
@@ -96,7 +96,7 @@ export const flash = async (
   if (!build) {
     fireStateEvent({
       state: State.ERROR,
-      message: `Your ${chipFamily} board is not supported.`,
+      message: `Bo mạch ${chipFamily} không được hỗ trợ.`,
       details: { error: FlashError.NOT_SUPPORTED, details: chipFamily },
     });
     await esploader.disconnect();
@@ -105,7 +105,7 @@ export const flash = async (
 
   fireStateEvent({
     state: State.PREPARING,
-    message: "Preparing installation...",
+    message: "Đang chuẩn bị cài đặt...",
     details: { done: false },
   });
 
@@ -144,20 +144,20 @@ export const flash = async (
 
   fireStateEvent({
     state: State.PREPARING,
-    message: "Installation prepared",
+    message: "Đang chuẩn bị cài đặt",
     details: { done: true },
   });
 
   if (eraseFirst) {
     fireStateEvent({
       state: State.ERASING,
-      message: "Erasing device...",
+      message: "Đang xóa...",
       details: { done: false },
     });
     await espStub.eraseFlash();
     fireStateEvent({
       state: State.ERASING,
-      message: "Device erased",
+      message: "Đã xóa thiết bị",
       details: { done: true },
     });
   }
@@ -166,7 +166,7 @@ export const flash = async (
 
   fireStateEvent({
     state: State.WRITING,
-    message: `Writing progress: ${lastPct}%`,
+    message: `Quá trình ghi: ${lastPct}%`,
     details: {
       bytesTotal: totalSize,
       bytesWritten: 0,
@@ -216,7 +216,7 @@ export const flash = async (
 
   fireStateEvent({
     state: State.WRITING,
-    message: "Writing complete",
+    message: "Flash thành công",
     details: {
       bytesTotal: totalSize,
       bytesWritten: totalWritten,
@@ -230,6 +230,6 @@ export const flash = async (
 
   fireStateEvent({
     state: State.FINISHED,
-    message: "All done!",
+    message: "Tuyệt vời. Đã hoàn thành!",
   });
 };
