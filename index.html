@@ -1,10 +1,10 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <title>ESP Web Tools</title>
+    <title>Công cự Flash cho ESP</title>
     <meta
       name="description"
-      content="Easily allow users to flash new firmware for their ESP-devices on the web."
+      content="Cho phép Flash thiết bị ESP từ giao diện Web."
     />
     <meta name="viewport" content="width=device-width" />
 
@@ -102,18 +102,16 @@
   </head>
   <body>
     <div class="content">
-      <h1>ESP Web Tools</h1>
+      <h1>Công cụ Flash thiết bị ESP</h1>
       <p>
-        ESP Web Tools is a set of open source tools to allow working with ESP
-        devices in the browser.
+        Đây là công cụ mã nguồn mở cho phép làm việc với thiết bị ESP thông qua trình duyệt.
         <a href="https://github.com/esphome/esp-web-tools"
-          >The code is available on GitHub.</a
+          >Xem trên GitHub.</a
         >
       </p>
       <p>
-        To try it out and install
-        <a href="https://esphome.io">the ESPHome firmware</a>, connect an ESP to
-        your computer and hit the button:
+        Để thử lại và cài đặt
+        <a href="https://esphome.io">với thiết bị ESPHome</a>, hãy kết nối với máy tính và bấm nút:
       </p>
       <esp-web-install-button
         log-console
@@ -122,27 +120,24 @@
       ></esp-web-install-button>
       <p>
         <i>
-          Note, this only works in desktop Chrome and Edge. Android support
-          should be possible but has not been implemented yet. If you don't see
-          your ESP device, you might miss <a href="#drivers">drivers</a>.
+          
+          Chú ý, phần mềm này chỉ hỗ trợ trình duyệt Chrome và Edge trên máy tính. Nếu không thấy tìm thấy thiết bị ESP, hãy kiểm tra lại cài đặt <a href="#drivers">drivers</a>.
         </i>
       </p>
       <p>
-        This works by combining
+        Hoạt động này là sự kết hợp của 
         <a
           href="https://developer.mozilla.org/en-US/docs/Web/API/Web_Serial_API"
           >Web Serial</a
         >
-        with a manifest which describes the firmware. It will automatically
-        detect the type of the connected ESP device and find the right firmware
-        files in the manifest.
+        với file firmware được dựng sẵn . Nó sẽ tự động dò tìm và nhận dạng thiết bị ESP được kết nối và tìm kiếm phiên bản firmware tương thích.
       </p>
       <div class="videoWrapper">
         <iframe
           width="560"
           height="315"
           src="https://www.youtube-nocookie.com/embed/k88BS8zgWq0"
-          title="YouTube video player"
+          title="Xem video hướng dẫn"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
