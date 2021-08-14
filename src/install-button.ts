@@ -85,8 +85,8 @@ export class InstallButton extends HTMLElement {
     if (!InstallButton.isSupported || !InstallButton.isAllowed) {
       this.toggleAttribute("install-unsupported", true);
       this.renderRoot.innerHTML = !InstallButton.isAllowed
-        ? "<slot name='not-allowed'>You can only install ESP devices on HTTPS websites or on the localhost.</slot>"
-        : "<slot name='unsupported'>Your browser does not support installing things on ESP devices. Use Google Chrome or Microsoft Edge.</slot>";
+        ? "<slot name='not-allowed'>Bạn chỉ có thể cài đặt thiết bị ESP từ HTTPS websites hoặc trên localhost.</slot>"
+        : "<slot name='unsupported'>Trình duyệt không hỗ trợ. Hãy sử dụng Google Chrome hoặc Microsoft Edge.</slot>";
       return;
     }
 
