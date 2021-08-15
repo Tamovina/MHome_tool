@@ -90,6 +90,9 @@
         padding: 8px;
         border-bottom: 1px solid #ccc;
       }
+      .instal_botton{
+      text-align: center;
+      }
     </style>
     <script module>
       import(
@@ -113,6 +116,7 @@
         Để cài đặt
         <a href="https://tamovina.github.io/MHome_tool/">cho thiết bị MHome</a>, hãy kết nối với máy tính và bấm nút BẮT ĐẦU CÀI ĐẶT:
       </p>
+      <div class="instal_botton ">
 
        <esp-web-install-button
         manifest="static/firmware_build/manifest.json"
@@ -129,7 +133,7 @@
         "state-changed", (ev) => { console.log(ev.detail) }
         );
      </script>    
-     
+      </div>
       <p>
         <i>  
           Chú ý, phần mềm này chỉ hỗ trợ trình duyệt Chrome và Edge trên máy tính. Nếu không thấy tìm thấy thiết bị ESP, hãy kiểm tra lại cài đặt <a href="#drivers">drivers</a>.
@@ -171,7 +175,7 @@
           <a href="https://github.com/Tamovina/Tamovina">MHome Tool</a>
         </div>
         <div>
-          Công cụ được sử dụng cho Dự án 
+          Được sử dụng cho Dự án 
           <a href="https://github.com/Tamovina/Tamovina">TAMOVINA</a>
         </div>
         <div class="initiative">
