@@ -74,10 +74,10 @@ export const enum State {
 }
 
 export const enum FlashError {
-  FAILED_INITIALIZING = "failed_initialize",
-  FAILED_MANIFEST_FETCH = "fetch_manifest_failed",
-  NOT_SUPPORTED = "not_supported",
-  FAILED_FIRMWARE_DOWNLOAD = "failed_firmware_download",
+  FAILED_INITIALIZING = "failed_initialize: Khởi tạo thất bại",
+  FAILED_MANIFEST_FETCH = "fetch_manifest_failed: Tìm nạp tệp thất bại",
+  NOT_SUPPORTED = "not_supported : Không hỗ trợ",
+  FAILED_FIRMWARE_DOWNLOAD = "failed_firmware_download: Lỗi tải firmware",
   WRITE_FAILED = "write_failed",
 }
 
