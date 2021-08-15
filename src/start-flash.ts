@@ -130,7 +130,7 @@ const startImprov = async (button: InstallButton) => {
     });
     const improvButton = document.createElement("button");
     improvButton.slot = "activate";
-    improvButton.textContent = "CLICK HERE TO FINISH SETTING UP YOUR DEVICE";
+    improvButton.textContent = "BẤM VÀO ĐÂY ĐỂ BẮT ĐẦU ĐIỀU KHIỂN THIẾT BỊ";
     improvEl.appendChild(improvButton);
     addElement(button, improvEl);
   }
