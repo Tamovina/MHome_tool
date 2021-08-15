@@ -1,5 +1,5 @@
 {
-  "name": "Cài đặt chương trình mẫu cho ESP",
+  "name": "Cài đặt chương trình cho MHome",
   "builds": [
     {
       "chipFamily": "ESP32",
