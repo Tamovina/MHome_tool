@@ -64,12 +64,12 @@ export const flash = async (
 
   fireStateEvent({
     state: State.INITIALIZING,
-    message: `Initialized. Found ${chipFamily}`,
+    message: `Đã khởi tạo cài đặt cho Chip ${chipFamily}`,
     details: { done: true },
   });
   fireStateEvent({
     state: State.MANIFEST,
-    message: "Fetching manifest...",
+    message: "Đang tìm Firmware...",
     details: { done: false },
   });
 
@@ -78,7 +78,7 @@ export const flash = async (
   } catch (err) {
     fireStateEvent({
       state: State.ERROR,
-      message: `Unable to fetch manifest: ${err.message}`,
+      message: `Không tìm thấy phần mềm phù hợp: ${err.message}`,
       details: { error: FlashError.FAILED_MANIFEST_FETCH, details: err },
     });
     await esploader.disconnect();
@@ -89,7 +89,7 @@ export const flash = async (
 
   fireStateEvent({
     state: State.MANIFEST,
-    message: `Found manifest for ${manifest.name}`,
+    message: `Tìm thấy yêu cầu ${manifest.name}`,
     details: { done: true },
   });
 
@@ -114,7 +114,7 @@ export const flash = async (
     const resp = await fetch(url);
     if (!resp.ok) {
       throw new Error(
-        `Downlading firmware ${part.path} failed: ${resp.status}`
+        `Đang tải firmware ${part.path} gặp lỗi: ${resp.status}`
       );
     }
     return resp.arrayBuffer();
@@ -191,7 +191,7 @@ export const flash = async (
           lastPct = newPct;
           fireStateEvent({
             state: State.WRITING,
-            message: `Writing progress: ${newPct}%`,
+            message: `Tiến trình ghi: ${newPct}%`,
             details: {
               bytesTotal: totalSize,
               bytesWritten: totalWritten + bytesWritten,
